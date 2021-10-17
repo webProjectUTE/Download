@@ -37,14 +37,16 @@
         <th>Name</th>
         <th>Value</th>
     </tr>
+    <tbody class="height100">
     <c:forEach var="c" items="${cookie}">      
     <tr>
-        <td><c:out value='${c.value.name}'/></td>
-        <td><c:out value='${c.value.value}'/></td>
+        <td class="textalignleftandpl"><c:out value='${c.value.name}'/></td>
+        <td class="textalignleftandpl"><c:out value='${c.value.value}'/></td>
     </tr>
     </c:forEach>  
+     </tbody>
     </table>
-    	<div class="box centerbox subbox">
+    	<div class="box centerbox subbox textalignleft paddingleft59px">
             <p><a href="download?action=viewAlbums" class = "text-color h5">●View list of albums</a></p>
 
             <p><a href="download?action=deleteCookies" class = "text-color h5">●Delete all persistent cookies</a></p> 

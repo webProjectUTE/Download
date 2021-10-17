@@ -44,7 +44,7 @@
         <td><a href="musicStore/sound/${productCode}/tank.mp3" class = "text-color h5">MP3</a></td>
     </tr>
     </table>
-    	<div class="box centerbox subbox">
+    	<div class="box centerbox subbox textalignleft">
     <p><a href="?action=viewAlbums" class = "text-color h5">●View list of albums</a></p> 
     <p><a href="?action=viewCookies" class = "text-color h5">●View all cookies</a></p>               
         </div>

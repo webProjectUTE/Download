@@ -24,6 +24,22 @@
     </head>
     <body>
 <div class="container">
+<!-- Button Require -->
+<div class="positivebtn"> 
+<button id="open">
+  Require
+</button>
+
+<div class="modalbtn-container" id="modal_container">
+  <div class="modalbtn">
+    <h1 class="text-black">Download</h1>
+    <img src="images/download_9_1_325.png">
+    <button id="close">
+      Close
+    </button>
+  </div>
+</div>
+  </div>
     <div class="row">
         <!--Side bar menu-->
         <ul class="col-3 sidebar-menu box">
@@ -61,30 +77,31 @@
 
        <!--Main content-->
         <div class="col-9">
-            <h1>List of albums</h1>
+            <h1 class="textaligncenter">List of albums</h1>
 
             <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
             <c:if test="${cookie.firstNameCookie.value != null}">
     <p>Welcome back, <c:out value='${cookie.firstNameCookie.value}'/></p>
 </c:if>
-<p class = "box">
-    <a href="download?action=checkUser&amp;productCode=8601" class = "text-color h5">
+
+<p class = "box textalignleft paddingleft220"> 
+    <a href="download?action=checkUser&amp;productCode=8601" class = "text-color h5  marginbottom14">
         86 (the band) - True Life Songs and Pictures
     </a><br>
     
-    <a href="download?action=checkUser&amp;productCode=pf01" class = "text-color h5">
+    <a href="download?action=checkUser&amp;productCode=pf01" class = "text-color h5  marginbottom14">
         Paddlefoot - The First CD
     </a><br>
     
-    <a href="download?action=checkUser&amp;productCode=pf02" class = "text-color h5">
+    <a href="download?action=checkUser&amp;productCode=pf02" class = "text-color h5  marginbottom14">
         Paddlefoot - The Second CD
     </a><br>
     
-    <a href="download?action=checkUser&amp;productCode=jr01" class = "text-color h5">
+    <a href="download?action=checkUser&amp;productCode=jr01" class = "text-color h5  marginbottom14">
         Joe Rut - Genuine Wood Grained Finish
     </a>
-    </p>
-            
+</p>   
+           
         </div>
     </div>
 </div>
