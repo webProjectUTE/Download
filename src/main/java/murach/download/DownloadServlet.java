@@ -9,7 +9,6 @@ import murach.data.UserIO;
 import murach.util.CookieUtil;
 
 public class DownloadServlet extends HttpServlet {
-
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -47,11 +46,25 @@ public class DownloadServlet extends HttpServlet {
             throws IOException, ServletException {
 
         String action = request.getParameter("action");
+        String firstName = request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
+        String email = request.getParameter("email");
         
         // perform action and set URL to appropriate page
         String url = "/index.jsp";
         if (action.equals("registerUser")) {
-            url = registerUser(request, response);
+        	String message;
+            if (firstName == null || lastName == null || email == null ||
+                firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
+                message = "Please fill out all three text boxes.";
+                url = "/register.jsp";
+            } 
+            else {
+            	message = "";
+            	url = registerUser(request, response);
+            }
+            
+            request.setAttribute("message", message);
         }
 
         // forward to the view
